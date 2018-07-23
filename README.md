@@ -16,7 +16,5 @@ The endpoint for this skill is an AWS Lambda Function. To deploy make sure you i
 On the Alexa side, copy the content of ```model.json``` into your Json Editor in your Alexa skill console to build the model.
 
 And you're good to go!
-![enter image description here](https://media.giphy.com/media/l0IsIZw8doJm3ysRq/giphy.gif)
- 
  
 
