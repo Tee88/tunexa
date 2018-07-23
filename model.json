@@ -1,0 +1,97 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "tunexa",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetCurrencyRate",
+                    "slots": [
+                        {
+                            "name": "currency",
+                            "type": "currency",
+                            "samples": [
+                                "{currency}",
+                                "for {currency}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "for {currency}",
+                        "the Tunisian currency rates.",
+                        "the currency rates.",
+                        "about the Tunisian currency rates.",
+                        "about the currency rates.",
+                        "for {currency} worh",
+                        "for {currency} worth in Tunisian Dinars",
+                        "for {currency} price",
+                        "{currency} "
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "currency",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "euros"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dollars"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetCurrencyRate",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "currency",
+                            "type": "currency",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1334540961952.751055801575"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1334540961952.751055801575",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do want to know the rate for Dollars, or Euros?"
+                    }
+                ]
+            }
+        ]
+    }
+}

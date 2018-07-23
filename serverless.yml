@@ -1,0 +1,13 @@
+
+
+service: rates
+
+provider:
+  profile: <YOUR AWS PROFILE>
+  name: aws
+  region: us-east-1
+  runtime: nodejs8.10
+
+functions:
+  rates:
+    handler: handler.rates
